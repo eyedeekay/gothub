@@ -97,12 +97,12 @@ var (
 type Command func(Options) error
 
 var Commands = map[goptions.Verbs]Command{
-	"download": downloadcmd,
-	"upload":   uploadcmd,
-	"release":  releasecmd,
-	"edit":     editcmd,
-	"delete":   deletecmd,
-	"info":     infocmd,
+	"download": Downloadcmd,
+	"upload":   Uploadcmd,
+	"release":  Releasecmd,
+	"edit":     Editcmd,
+	"delete":   Deletecmd,
+	"info":     Infocmd,
 }
 
 func Infocmd(opt Options) error {
