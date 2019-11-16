@@ -105,7 +105,7 @@ var Commands = map[goptions.Verbs]Command{
 	"info":     infocmd,
 }
 
-func infocmd(opt Options) error {
+func Infocmd(opt Options) error {
 	user := nvls(opt.Info.User, EnvUser)
 	repo := nvls(opt.Info.Repo, EnvRepo)
 	token := nvls(opt.Info.Token, EnvToken)
@@ -188,7 +188,7 @@ func renderInfoJSON(tags []Tag, releases []Release) error {
 	return enc.Encode(&out)
 }
 
-func uploadcmd(opt Options) error {
+func Uploadcmd(opt Options) error {
 	user := nvls(opt.Upload.User, EnvUser)
 	repo := nvls(opt.Upload.Repo, EnvRepo)
 	token := nvls(opt.Upload.Token, EnvToken)
@@ -293,7 +293,7 @@ func uploadcmd(opt Options) error {
 	return nil
 }
 
-func downloadcmd(opt Options) error {
+func Downloadcmd(opt Options) error {
 	user := nvls(opt.Download.User, EnvUser)
 	repo := nvls(opt.Download.Repo, EnvRepo)
 	token := nvls(opt.Download.Token, EnvToken)
@@ -397,7 +397,7 @@ func ValidateCredentials(user, repo, token, tag string) error {
 	return nil
 }
 
-func releasecmd(opt Options) error {
+func Releasecmd(opt Options) error {
 	cmdopt := opt.Release
 	user := nvls(cmdopt.User, EnvUser)
 	repo := nvls(cmdopt.Repo, EnvRepo)
@@ -467,7 +467,7 @@ func releasecmd(opt Options) error {
 	return nil
 }
 
-func editcmd(opt Options) error {
+func Editcmd(opt Options) error {
 	cmdopt := opt.Edit
 	user := nvls(cmdopt.User, EnvUser)
 	repo := nvls(cmdopt.Repo, EnvRepo)
@@ -542,7 +542,7 @@ func editcmd(opt Options) error {
 	return nil
 }
 
-func deletecmd(opt Options) error {
+func Deletecmd(opt Options) error {
 	user, repo, token, tag := nvls(opt.Delete.User, EnvUser),
 		nvls(opt.Delete.Repo, EnvRepo),
 		nvls(opt.Delete.Token, EnvToken),
