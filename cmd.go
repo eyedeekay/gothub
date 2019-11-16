@@ -12,7 +12,7 @@ import (
 	"strconv"
 
 	"github.com/aktau/github-release/github"
-    "github.com/voxelbrain/goptions"
+	"github.com/voxelbrain/goptions"
 )
 
 type Options struct {

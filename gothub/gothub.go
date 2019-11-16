@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/aktau/github-release/github"
-    . "github.com/eyedeekay/gothub"
+	. "github.com/eyedeekay/gothub"
 	"github.com/voxelbrain/goptions"
 )
 
