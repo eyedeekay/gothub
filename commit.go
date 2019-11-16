@@ -1,4 +1,4 @@
-package main
+package gothub
 
 type Commit struct {
 	Sha string `json:"sha"`

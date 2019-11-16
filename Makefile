@@ -21,31 +21,31 @@ all: $(EXECUTABLE)
 
 # the executable used to perform the upload, dogfooding and all...
 bin/tmp/$(EXECUTABLE):
-	go build -o "$@"
+	go build -o "$@" ./gothub
 
 # arm
 bin/linux/arm/5/$(EXECUTABLE):
-	GOARM=5 GOARCH=arm GOOS=linux go build -o "$@"
+	GOARM=5 GOARCH=arm GOOS=linux go build -o "$@" ./gothub
 bin/linux/arm/7/$(EXECUTABLE):
-	GOARM=7 GOARCH=arm GOOS=linux go build -o "$@"
+	GOARM=7 GOARCH=arm GOOS=linux go build -o "$@" ./gothub
 
 # 386
 bin/darwin/386/$(EXECUTABLE):
-	GOARCH=386 GOOS=darwin go build -o "$@"
+	GOARCH=386 GOOS=darwin go build -o "$@" ./gothub
 bin/linux/386/$(EXECUTABLE):
-	GOARCH=386 GOOS=linux go build -o "$@"
+	GOARCH=386 GOOS=linux go build -o "$@" ./gothub
 bin/windows/386/$(EXECUTABLE):
-	GOARCH=386 GOOS=windows go build -o "$@"
+	GOARCH=386 GOOS=windows go build -o "$@" ./gothub
 
 # amd64
 bin/freebsd/amd64/$(EXECUTABLE):
-	GOARCH=amd64 GOOS=freebsd go build -o "$@"
+	GOARCH=amd64 GOOS=freebsd go build -o "$@" ./gothub
 bin/darwin/amd64/$(EXECUTABLE):
-	GOARCH=amd64 GOOS=darwin go build -o "$@"
+	GOARCH=amd64 GOOS=darwin go build -o "$@" ./gothub
 bin/linux/amd64/$(EXECUTABLE):
-	GOARCH=amd64 GOOS=linux go build -o "$@"
+	GOARCH=amd64 GOOS=linux go build -o "$@" ./gothub
 bin/windows/amd64/$(EXECUTABLE).exe:
-	GOARCH=amd64 GOOS=windows go build -o "$@"
+	GOARCH=amd64 GOOS=windows go build -o "$@" ./gothub
 
 # compressed artifacts, makes a huge difference (Go executable is ~9MB,
 # after compressing ~2MB)

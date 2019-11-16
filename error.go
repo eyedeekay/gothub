@@ -1,4 +1,4 @@
-package main
+package gothub
 
 import (
 	"encoding/json"
